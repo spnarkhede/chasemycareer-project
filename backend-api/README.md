@@ -100,7 +100,7 @@ JWT_EXPIRES_IN=7d
 
 # CORS Configuration
 FRONTEND_URL=http://localhost:5173
-ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000
+ALLOWED_ORIGINS=http://localhost:5173
 
 # Rate Limiting
 RATE_LIMIT_WINDOW_MS=900000

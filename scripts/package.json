@@ -4,7 +4,8 @@
   "description": "Utility scripts for ChaseMyCareer",
   "type": "module",
   "scripts": {
-    "create-users": "tsx create-dummy-users.ts"
+    "create-users": "tsx create-dummy-users.ts",
+    "reset-passwords": "tsx reset-dummy-passwords.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.3",

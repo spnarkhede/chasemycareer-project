@@ -445,6 +445,8 @@
     |-- create-tasks.sql
     |-- package-lock.json
     |-- package.json
+    |-- reset-dummy-passwords.ts
+    |-- reset-passwords.sql
 |-- setup.sh
 |-- SETUP_GUIDE.md
 |-- sgconfig.yml

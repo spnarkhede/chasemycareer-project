@@ -39,7 +39,7 @@ app.use('*', async (c, next) => {
       const allowedOrigins = [
         c.env.FRONTEND_URL,
         'http://localhost:5173',
-        'http://localhost:3000',
+        // 'http://localhost:3000',
       ].filter(Boolean);
       
       return allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
