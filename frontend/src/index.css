@@ -1,0 +1,133 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0 0% 98%;
+    --foreground: 210 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+    --primary: 207 55% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 207 60% 55%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 207 55% 35%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 207 60% 55%;
+    --accent-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 207 55% 35%;
+    --chart-1: 207 55% 35%;
+    --chart-2: 207 60% 55%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 210 40% 70%;
+    --chart-5: 215 16% 47%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 20% 15%;
+    --sidebar-primary: 207 55% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 207 55% 35%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 207 55% 35%;
+    --shadow-elegant: 0 10px 30px -10px hsl(207 55% 35% / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 210 40% 98%;
+    --card: 210 30% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 210 30% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 207 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 207 65% 65%;
+    --secondary: 210 30% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 30% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 207 60% 55%;
+    --accent-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 30% 18%;
+    --input: 210 30% 18%;
+    --ring: 207 60% 55%;
+    --chart-1: 207 60% 55%;
+    --chart-2: 207 65% 65%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 210 40% 70%;
+    --chart-5: 215 20% 65%;
+    --sidebar-background: 210 30% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 207 60% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 210 30% 18%;
+    --sidebar-ring: 207 60% 55%;
+    --shadow-elegant: 0 10px 30px -10px hsl(207 60% 55% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Layout Density Variables */
+  :root {
+    --spacing-unit: 1rem;
+    --card-padding: 1.5rem;
+    --section-spacing: 2rem;
+    --button-height: 2.5rem;
+    --input-height: 2.5rem;
+  }
+
+  .density-compact {
+    --spacing-unit: 0.75rem;
+    --card-padding: 1rem;
+    --section-spacing: 1.5rem;
+    --button-height: 2rem;
+    --input-height: 2rem;
+  }
+
+  .density-comfortable {
+    --spacing-unit: 1rem;
+    --card-padding: 1.5rem;
+    --section-spacing: 2rem;
+    --button-height: 2.5rem;
+    --input-height: 2.5rem;
+  }
+
+  .density-spacious {
+    --spacing-unit: 1.25rem;
+    --card-padding: 2rem;
+    --section-spacing: 2.5rem;
+    --button-height: 3rem;
+    --input-height: 3rem;
+  }
+}

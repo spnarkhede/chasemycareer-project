@@ -1,0 +1,20 @@
+{
+  "name": "chasemycareer-backend",
+  "version": "1.0.0",
+  "description": "ChaseMyCareer Backend - Supabase",
+  "scripts": {
+    "start": "npx supabase start",
+    "stop": "npx supabase stop",
+    "status": "npx supabase status",
+    "db:push": "npx supabase db push",
+    "db:reset": "npx supabase db reset",
+    "db:lint": "npx supabase db lint",
+    "db:pull": "npx supabase db pull",
+    "migration:new": "npx supabase migration new",
+    "functions:serve": "npx supabase functions serve",
+    "functions:deploy": "npx supabase functions deploy"
+  },
+  "dependencies": {
+    "supabase": "^1.142.2"
+  }
+}
