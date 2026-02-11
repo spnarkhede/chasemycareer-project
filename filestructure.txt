@@ -1,0 +1,492 @@
+|-- .dev.vars
+|-- .env
+|-- .env.template
+|-- .gitignore
+|-- APPLICATION_STATUS.md
+|-- backend
+    |-- .env.example
+    |-- package.json
+    |-- README.md
+    |-- supabase
+        |-- config.toml
+        |-- functions
+            |-- create-demo-user
+                |-- index.ts
+            |-- create-test-users
+                |-- index.ts
+            |-- exchange-google-token
+                |-- index.ts
+            |-- refresh-google-token
+                |-- index.ts
+        |-- migrations
+            |-- 00001_create_profiles_table.sql
+            |-- 00002_create_job_tracker_schema.sql
+            |-- 00003_create_auth_security_tables.sql
+            |-- 00004_create_oauth_tokens_table.sql
+            |-- 00005_add_user_preferences.sql
+            |-- 00099_create_test_users.sql
+            |-- 20260102000003_add_dummy_users.sql
+            |-- 20260102_add_admin_functionality.sql
+            |-- 20260102_populate_50day_program.sql
+        |-- secrets
+            |-- required.json
+|-- backend-api
+    |-- .env
+    |-- .env.example
+    |-- .gitignore
+    |-- package-lock.json
+    |-- package.json
+    |-- README.md
+    |-- src
+        |-- config
+            |-- supabase.ts
+        |-- controllers
+            |-- applicationController.ts
+            |-- authController.ts
+            |-- taskController.ts
+            |-- userController.ts
+        |-- index.ts
+        |-- middleware
+            |-- auth.ts
+            |-- cors.ts
+            |-- errorHandler.ts
+        |-- routes
+            |-- applicationRoutes.ts
+            |-- authRoutes.ts
+            |-- taskRoutes.ts
+            |-- userRoutes.ts
+    |-- tsconfig.json
+    |-- wrangler.toml
+|-- docs
+    |-- 001. ARCHITECTURE_DIAGRAM.md
+    |-- 002. ARCHITECTURE_SUMMARY.md
+    |-- 003. AUTHENTICATION_FIXES_SUMMARY.md
+    |-- 004. AUTH_FIXES_SUMMARY.md
+    |-- 005. BEFORE_AFTER_COMPARISON.md
+    |-- 006. BRANDING.md
+    |-- 007. CLOUDFLARE_FILES_INDEX.md
+    |-- 008. CLOUDFLARE_INTEGRATION_PLAN.md
+    |-- 009. CLOUDFLARE_QUICK_REFERENCE.md
+    |-- 010. CLOUDFLARE_SETUP_GUIDE.md
+    |-- 011. COMPLETE_SETUP_PLAN.md
+    |-- 012. DEPLOYMENT_GUIDE.md
+    |-- 013. DPA_CHECKLIST.md
+    |-- 014. EDITING_DAYS_GUIDE.md
+    |-- 015. FILE_STRUCTURE_UPDATE.md
+    |-- 016. FINAL_STATUS.md
+    |-- 017. GERMAN_EXAMPLES.md
+    |-- 018. GETTING_STARTED.md
+    |-- 019. HOW_TO_CUSTOMIZE.md
+    |-- 020. IMPLEMENTATION_CHECKLIST.md
+    |-- 021. IMPLEMENTATION_CHECKLIST_DEMO.md
+    |-- 022. IMPLEMENTATION_COMPLETE.md
+    |-- 023. IMPLEMENTATION_PLAN.md
+    |-- 024. IMPLEMENTATION_SUMMARY_OAUTH.md
+    |-- 025. INSTALLATION_GUIDE.md
+    |-- 026. LOCAL_DEVELOPMENT_GUIDE.md
+    |-- 027. LOGIN_FIX_SUMMARY.md
+    |-- 028. LOGIN_SOLUTION.md
+    |-- 029. MANUAL_TESTING_CHECKLIST.md
+    |-- 030. MASTER_DEPLOYMENT_GUIDE.md
+    |-- 031. OAUTH_FLOW_DIAGRAM.md
+    |-- 032. OAUTH_QUICK_START.md
+    |-- 033. PERFORMANCE_CHECKLIST.md
+    |-- 034. PERFORMANCE_SUMMARY.md
+    |-- 035. PREVIEW_FIX.md
+    |-- 036. PROJECT_ANALYSIS.md
+    |-- 037. PROJECT_SUMMARY.md
+    |-- 038. QUICK_COMMANDS.md
+    |-- 039. QUICK_START.md
+    |-- 040. QUICK_START_DEPLOYMENT.md
+    |-- 041. README.md
+    |-- 042. README_OAUTH.md
+    |-- 043. SETTINGS_COMPONENT_MAP.md
+    |-- 044. SETTINGS_QUICK_REFERENCE.md
+    |-- 045. SETTINGS_SYSTEM.md
+    |-- 046. SETUP_SUMMARY.md
+    |-- 047. UPDATES.md
+    |-- 048. VERCEL_DEPLOYMENT.md
+    |-- 049. APP_CUSTOMIZATION_GUIDE.md
+    |-- 050. AUTHENTICATION_SYSTEM.md
+    |-- 051. BRANDING_IMPLEMENTATION.md
+    |-- 052. BRAND_PREVIEW.md
+    |-- 053. BUILD_SUCCESS.md
+    |-- 054. CHANGES_SUMMARY.md
+    |-- 055. CLOUDFLARE_D1_MIGRATION_ANALYSIS.md
+    |-- 056. CLOUDFLARE_DEPLOYMENT.md
+    |-- 057. CLOUDFLARE_IMPLEMENTATION_SUMMARY.md
+    |-- 058. COMPLETE_PROJECT_SUMMARY.md
+    |-- 059. CONGRATULATIONS_CARD_UPDATE.md
+    |-- 060. CREATE_TEST_USERS_FIX.md
+    |-- 061. CUSTOMIZATION_SUMMARY.md
+    |-- 062. DEMO_MODAL_GUIDE.md
+    |-- 063. DEMO_MODAL_IMPLEMENTATION.md
+    |-- 064. DEMO_MODAL_SUMMARY.md
+    |-- 065. DEMO_MODE_SUMMARY.md
+    |-- 066. DEMO_QUICKSTART.md
+    |-- 067. DEMO_SETUP.md
+    |-- 068. DEMO_USER_FLOW.md
+    |-- 069. DOMAIN_SETUP.md
+    |-- 070. ENHANCEMENTS_SUMMARY.md
+    |-- 071. FINAL_IMPLEMENTATION_SUMMARY.md
+    |-- 072. FINAL_SUMMARY.md
+    |-- 073. GDPR_COMPLIANCE.md
+    |-- 074. GDPR_IMPLEMENTATION_SUMMARY.md
+    |-- 075. GERMANY_LOCALIZATION.md
+    |-- 076. GOOGLE_CLIENT_ID_SETUP.md
+    |-- 077. GOOGLE_OAUTH_CALENDAR_SETUP.md
+    |-- 078. GOOGLE_OAUTH_SETUP.md
+    |-- 079. HOW_TO_LOGIN.md
+    |-- 080. HOW_TO_USE_DEMO_MODAL.md
+    |-- 081. IMPLEMENTATION_SUMMARY.md
+    |-- 082. LOGIN_TROUBLESHOOTING.md
+    |-- 083. PASSWORD_RESET_IMPLEMENTATION.md
+    |-- 084. PASSWORD_RESET_QUICK_GUIDE.md
+    |-- 085. PERFORMANCE_OPTIMIZATIONS.md
+    |-- 086. PROJECT_RESTRUCTURING_GUIDE.md
+    |-- 087. QUICK_LOGIN.md
+    |-- 088. README_OLD.md
+    |-- 089. REQUIREMENTS_CHECKLIST.md
+    |-- 090. RESTRUCTURING_COMPLETE.md
+    |-- 091. ROUTING.md
+    |-- 092. SEPARATION_IMPLEMENTATION_SUMMARY.md
+    |-- 093. SEQUENTIAL_PROGRESSION_UPDATE.md
+    |-- 094. SETTINGS_IMPLEMENTATION_SUMMARY.md
+    |-- 095. SETTINGS_VISUAL_GUIDE.md
+    |-- 096. SETUP_CHECKLIST.md
+    |-- 097. SETUP_FILES_INDEX.md
+    |-- 098. START_HERE.md
+    |-- 099. SUPABASE_SETUP.md
+    |-- 100. TEST_ACCOUNTS.md
+    |-- 101. TEST_USERS_GUIDE.md
+    |-- 102. TODO.md
+    |-- 103. prd.md
+    |-- 104. DOCUMENTATION_INDEX.md
+    |-- 105. REBRANDING_REPORT.md
+    |-- 106. REBRANDING_SUMMARY.md
+    |-- 107. PROJECT_STATUS_FINAL.md
+    |-- 108. VERIFICATION_REPORT.md
+    |-- archive
+        |-- 001. PROJECT_INDEX.md
+        |-- 002. QUICK_START.md
+        |-- 003. README.md
+        |-- 004. README.md
+        |-- 109. README.md
+    |-- COMPLETE_INDEX.md
+    |-- ORGANIZATION_COMPLETE.md
+    |-- prd.md
+    |-- rename_docs.sh
+|-- DUMMY_USERS_CREDENTIALS.md
+|-- frontend
+    |-- .env
+    |-- .env.example
+    |-- .rules
+        |-- check.sh
+        |-- SelectItem.yml
+        |-- testBuild.sh
+    |-- .wrangler
+    |-- biome.json
+    |-- components.json
+    |-- index.html
+    |-- package.json
+    |-- postcss.config.js
+    |-- public
+        |-- favicon.png
+        |-- images
+            |-- error
+                |-- 404-dark.svg
+                |-- 404.svg
+                |-- 500-dark.svg
+                |-- 500.svg
+                |-- 503-dark.svg
+                |-- 503.svg
+            |-- favicon.ico
+            |-- logo
+                |-- auth-logo.svg
+                |-- logo-dark.svg
+                |-- logo-icon.svg
+            |-- shape
+                |-- grid-01.svg
+        |-- _redirects
+    |-- README.md
+    |-- src
+        |-- App.tsx
+        |-- components
+            |-- auth
+                |-- ProtectedRoute.tsx
+                |-- ReauthModal.tsx
+            |-- calendar
+                |-- CalendarGrid.tsx
+                |-- DayCard.tsx
+            |-- common
+                |-- CardGridSkeleton.tsx
+                |-- CookieConsent.tsx
+                |-- DashboardSkeleton.tsx
+                |-- DemoModal.tsx
+                |-- DemoModeBanner.tsx
+                |-- Footer.tsx
+                |-- Header.tsx
+                |-- PageLoader.tsx
+                |-- PageMeta.tsx
+                |-- ShareProgress.tsx
+                |-- TableSkeleton.tsx
+                |-- ThemeToggle.tsx
+            |-- dropzone.tsx
+            |-- icons
+                |-- GoogleIcon.tsx
+            |-- ui
+                |-- accordion.tsx
+                |-- alert-dialog.tsx
+                |-- alert.tsx
+                |-- animated-counter.tsx
+                |-- aspect-ratio.tsx
+                |-- avatar.tsx
+                |-- badge.tsx
+                |-- breadcrumb.tsx
+                |-- button.tsx
+                |-- calendar.tsx
+                |-- card.tsx
+                |-- carousel.tsx
+                |-- chart.tsx
+                |-- checkbox.tsx
+                |-- collapsible.tsx
+                |-- command.tsx
+                |-- dialog.tsx
+                |-- drawer.tsx
+                |-- dropdown-menu.tsx
+                |-- form.tsx
+                |-- input-otp.tsx
+                |-- input.tsx
+                |-- label.tsx
+                |-- loading-message.tsx
+                |-- map-cn.tsx
+                |-- menubar.tsx
+                |-- multi-select.tsx
+                |-- navigation-menu.tsx
+                |-- pagination.tsx
+                |-- popover.tsx
+                |-- progress.tsx
+                |-- qrcodedataurl.tsx
+                |-- radio-group.tsx
+                |-- resizable.tsx
+                |-- scroll-area.tsx
+                |-- select.tsx
+                |-- separator.tsx
+                |-- sheet.tsx
+                |-- sidebar.tsx
+                |-- skeleton.tsx
+                |-- slider.tsx
+                |-- sonner.tsx
+                |-- switch.tsx
+                |-- table.tsx
+                |-- tabs.tsx
+                |-- textarea.tsx
+                |-- toast.tsx
+                |-- toaster.tsx
+                |-- toggle-group.tsx
+                |-- toggle.tsx
+                |-- tooltip.tsx
+                |-- video.tsx
+                |-- __tests__
+                    |-- button.test.tsx
+        |-- constants
+            |-- settings.ts
+        |-- contexts
+            |-- AuthContext.tsx
+            |-- ThemeContext.tsx
+        |-- data
+            |-- days
+                |-- day-01.ts
+                |-- day-02.ts
+                |-- day-03.ts
+                |-- day-04.ts
+                |-- day-05.ts
+                |-- day-06.ts
+                |-- day-07.ts
+                |-- day-08.ts
+                |-- day-09.ts
+                |-- day-10.ts
+                |-- day-11.ts
+                |-- day-12.ts
+                |-- day-13.ts
+                |-- day-14.ts
+                |-- day-15.ts
+                |-- day-16.ts
+                |-- day-17.ts
+                |-- day-18.ts
+                |-- day-19.ts
+                |-- day-20.ts
+                |-- day-21.ts
+                |-- day-22.ts
+                |-- day-23.ts
+                |-- day-24.ts
+                |-- day-25.ts
+                |-- day-26.ts
+                |-- day-27.ts
+                |-- day-28.ts
+                |-- day-29.ts
+                |-- day-30.ts
+                |-- day-31.ts
+                |-- day-32.ts
+                |-- day-33.ts
+                |-- day-34.ts
+                |-- day-35.ts
+                |-- day-36.ts
+                |-- day-37.ts
+                |-- day-38.ts
+                |-- day-39.ts
+                |-- day-40.ts
+                |-- day-41.ts
+                |-- day-42.ts
+                |-- day-43.ts
+                |-- day-44.ts
+                |-- day-45.ts
+                |-- day-46.ts
+                |-- day-47.ts
+                |-- day-48.ts
+                |-- day-49.ts
+                |-- day-50.ts
+            |-- jobSearchData.ts
+        |-- db
+            |-- api-cloudflare-examples.ts
+            |-- api.ts
+            |-- auth-api.ts
+            |-- supabase.ts
+            |-- __tests__
+                |-- api.integration.test.ts
+        |-- global.d.ts
+        |-- hooks
+            |-- use-debounce.ts
+            |-- use-go-back.ts
+            |-- use-mobile.ts
+            |-- use-progress.ts
+            |-- use-supabase-upload.ts
+            |-- use-toast.tsx
+            |-- useDemoProtection.ts
+        |-- i18n
+            |-- de.ts
+        |-- index.css
+        |-- lib
+            |-- utils.ts
+            |-- __tests__
+                |-- utils.test.ts
+        |-- main.tsx
+        |-- pages
+            |-- admin
+                |-- AdminDashboard.tsx
+                |-- CreateDemoUser.tsx
+                |-- CreateTestUsers.tsx
+            |-- auth
+                |-- ForgotPasswordPage.tsx
+                |-- LoginPage.tsx
+                |-- MfaEnrollPage.tsx
+                |-- OAuthCallback.tsx
+                |-- ResetPasswordPage.tsx
+                |-- SignUpPage.tsx
+            |-- Calendar.tsx
+            |-- Congratulations.tsx
+            |-- Dashboard.tsx
+            |-- DayDetail.tsx
+            |-- FiftyDayPlan.tsx
+            |-- InterviewPractice.tsx
+            |-- Interviews.tsx
+            |-- JobSearchCalendar.tsx
+            |-- JobTracker.tsx
+            |-- Landing.tsx
+            |-- Networking.tsx
+            |-- Onboarding.tsx
+            |-- PrivacyPolicy.tsx
+            |-- PrivacySettings.tsx
+            |-- settings
+                |-- AppCustomization.tsx
+                |-- JobSearchSettings.tsx
+                |-- NotificationSettings.tsx
+                |-- ProfileSettings.tsx
+                |-- SecuritySettingsPage.tsx
+            |-- Settings.tsx
+            |-- TermsOfService.tsx
+        |-- routes.tsx
+        |-- services
+            |-- .keep
+            |-- api.ts
+            |-- calendar.service.ts
+            |-- cloudflare.ts
+            |-- hybrid-manager.ts
+            |-- oauth.service.ts
+        |-- svg.d.ts
+        |-- test
+            |-- setup.ts
+            |-- test-utils.tsx
+        |-- types
+            |-- index.ts
+        |-- utils
+            |-- cache.ts
+        |-- vite-env.d.ts
+    |-- tailwind.config.js
+    |-- tsconfig.app.json
+    |-- tsconfig.check.json
+    |-- tsconfig.json
+    |-- tsconfig.node.json
+    |-- vite.config.dev.ts
+    |-- vite.config.ts
+    |-- vitest.config.ts
+|-- package-lock.json
+|-- package.json
+|-- PROJECT_INDEX.md
+|-- QUICK_START.md
+|-- QUICK_START_GUIDE.md
+|-- README.md
+|-- rebrand.sh
+|-- REFACTORING_COMPLETE.md
+|-- restructure.sh
+|-- schema.sql
+|-- scripts
+    |-- create-dummy-users.ts
+    |-- create-tasks.sql
+    |-- package-lock.json
+    |-- package.json
+|-- setup.sh
+|-- SETUP_GUIDE.md
+|-- sgconfig.yml
+|-- src
+    |-- db
+        |-- supabase.ts
+|-- supabase
+    |-- config.toml
+    |-- migrations
+        |-- 00001_add_admin_tables_only.sql
+        |-- 00002_add_admin_functions.sql
+        |-- 00003_create_daily_tasks_template.sql
+|-- test-backend.sh
+|-- tsconfig.check.json
+|-- vercel.json
+|-- vite.config.dev.ts
+|-- workers
+    |-- index.js
+|-- workers-backend
+    |-- .wrangler
+    |-- CLOUDFLARE_WORKERS_DEPLOYMENT.md
+    |-- package-lock.json
+    |-- package.json
+    |-- README.md
+    |-- src
+        |-- config
+            |-- supabase.ts
+        |-- controllers
+            |-- applicationController.ts
+            |-- authController.ts
+            |-- taskController.ts
+            |-- userController.ts
+        |-- index.ts
+        |-- middleware
+            |-- auth.ts
+            |-- errorHandler.ts
+            |-- rateLimiter.ts
+        |-- routes
+            |-- applicationRoutes.ts
+            |-- authRoutes.ts
+            |-- taskRoutes.ts
+            |-- userRoutes.ts
+    |-- tsconfig.json
+    |-- wrangler.toml
+|-- wrangler.toml

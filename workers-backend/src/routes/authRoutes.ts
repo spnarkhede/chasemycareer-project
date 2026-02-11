@@ -1,4 +1,5 @@
-import { Router } from 'express';
+import { Hono } from 'hono';
+import type { Env } from '../index';
 import {
   signup,
   login,
@@ -8,7 +9,7 @@ import {
   resetPassword,
 } from '../controllers/authController';
 
-const router = Router();
+const router = new Hono<{ Bindings: Env }>();
 
 // Public routes
 router.post('/signup', signup);
