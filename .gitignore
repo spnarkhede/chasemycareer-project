@@ -28,3 +28,7 @@ package-lock.json
 history/*.json
 .vite_cache
 .dev.vars
+.frontend/.env
+.env
+.env.template
+.backend-api/.env

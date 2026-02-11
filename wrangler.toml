@@ -1,44 +1,48 @@
 # Cloudflare Worker Configuration
-# This file configures the Cloudflare Worker for CareerPath50
+# This file configures the Cloudflare Worker for ChaseMyCareer
 
-name = "careerpath50-worker"
+name = "chasemycareer-worker"
 main = "workers/index.js"
 compatibility_date = "2024-01-01"
 
-# Account ID (replace with your actual account ID)
-account_id = "your_account_id_here"
-
-# Workers KV Namespace for caching
-[[kv_namespaces]]
-binding = "CACHE_KV"
-id = "your_kv_namespace_id"
-preview_id = "your_preview_kv_namespace_id"
-
-# R2 Bucket for storage (optional)
-[[r2_buckets]]
-binding = "R2_BUCKET"
-bucket_name = "careerpath50-storage"
-preview_bucket_name = "careerpath50-storage-preview"
-
-# Analytics Engine (optional)
-[[analytics_engine_datasets]]
-binding = "ANALYTICS"
+# Account ID - REPLACE THIS WITH YOUR ACTUAL CLOUDFLARE ACCOUNT ID
+# To find your account ID:
+# 1. Go to https://dash.cloudflare.com
+# 2. Click on "Workers & Pages" in the left sidebar
+# 3. Your Account ID is shown in the right sidebar
+account_id = "11fb96e501ee6e9daadc55dcb505d8fc"
 
 # Environment variables
 [vars]
 ENVIRONMENT = "production"
 
-# Routes (configure after deploying)
-# [[routes]]
-# pattern = "your-domain.com/*"
-# zone_name = "your-domain.com"
-
 # Development environment
 [env.development]
-name = "careerpath50-worker-dev"
+name = "chasemycareer-worker-dev"
 vars = { ENVIRONMENT = "development" }
 
 # Production environment
 [env.production]
-name = "careerpath50-worker"
+name = "chasemycareer-worker"
 vars = { ENVIRONMENT = "production" }
+
+# Optional: Uncomment and configure if you need KV storage
+# [[kv_namespaces]]
+# binding = "CACHE_KV"
+# id = "your_kv_namespace_id"
+# preview_id = "your_preview_kv_namespace_id"
+
+# Optional: Uncomment and configure if you need R2 storage
+# [[r2_buckets]]
+# binding = "R2_BUCKET"
+# bucket_name = "chasemycareer-storage"
+# preview_bucket_name = "chasemycareer-storage-preview"
+
+# Optional: Uncomment if you need Analytics Engine
+# [[analytics_engine_datasets]]
+# binding = "ANALYTICS"
+
+# Routes (configure after deploying)
+# [[routes]]
+# pattern = "your-domain.com/*"
+# zone_name = "your-domain.com"
