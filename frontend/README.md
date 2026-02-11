@@ -1,7 +1,3 @@
-# Welcome to Your Miaoda Project
-Miaoda Application Link URL
-    URL:https://medo.dev/projects/chasemycareer
-
 # 🎯 ChaseMyCareer Frontend
 
 A modern React application built with Vite, TypeScript, and Tailwind CSS for the ChaseMyCareer job search platform.

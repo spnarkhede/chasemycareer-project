@@ -1,7 +1,3 @@
-# Welcome to Your Miaoda Project
-Miaoda Application Link URL
-    URL:https://medo.dev/projects/chasemycareer
-
 # 🚀 ChaseMyCareer Backend API
 
 A RESTful API built with Node.js, Express, and TypeScript for the ChaseMyCareer job search platform.

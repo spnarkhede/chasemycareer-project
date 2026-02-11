@@ -1,7 +1,3 @@
-# Welcome to Your Miaoda Project
-Miaoda Application Link URL
-    URL:https://medo.dev/projects/chasemycareer
-
 # ChaseMyCareer Backend
 
 Supabase-powered backend for the ChaseMyCareer job search platform.

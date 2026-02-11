@@ -1,7 +1,3 @@
-# Welcome to Your Miaoda Project
-Miaoda Application Link URL
-    URL:https://medo.dev/projects/chasemycareer
-
 # 🎯 Chase My Career - 50-Day Job Search Platform
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
